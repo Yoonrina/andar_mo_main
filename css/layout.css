@@ -1,0 +1,732 @@
+@import 'reset.css';
+@import 'common.css';
+
+/* body */
+body{
+  min-width: 320px;
+  font-size: 15px;
+  font-family: 'gilroy','Noto Sans KR', sans-serif;
+  font-weight: 400;
+}
+body.hidden{
+  overflow: hidden;
+}
+
+/* 사이드메뉴 */
+aside{
+  position: fixed;
+  top: 0;
+  left: -90%;
+  width: 90%;
+  height: 100%;
+  background: #fff;
+  z-index: 9999;
+  padding: 0 24px 0 16px;
+  overflow-y: auto;
+  transition: 0.5s;
+}
+aside.open{
+  left: 0;
+}
+.aside_bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9998;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.aside_bg.open{
+  opacity: 1;
+  visibility: visible;
+}
+aside .closs{
+  position: absolute;
+  display: block;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  background: url(https://m.andar.co.kr/common/mo/icon_close.png) no-repeat;
+  background-size: 100% auto;
+}
+
+/* 아코디언 */
+aside .down_btn::after{
+  width: 30px;
+  height: 28px;
+  transition-duration: .3s;
+  background: url(https://m.andar.co.kr/common/mo/btn_open.png) no-repeat;
+  background-size: 28px auto;
+  background-position: center;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+aside .as_item .down_btn.open::after{
+  transform: rotate(180deg);
+  transition-duration: .3s;
+}
+aside .sub_menu{
+  height: 0;
+  overflow: hidden;
+}
+
+
+aside .login_area{
+  padding: 38px 0 26px;
+}
+aside .login_area .l_btn{
+  padding: 10px 26px;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -1px;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  font-weight: 500;
+  border-radius: 4px;
+  display: inline-block;
+}
+aside .login_area .l_btn.login{
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  border: 1px solid #000;
+} 
+aside .login_area .l_btn.join{
+  margin-left: 10px;
+}
+aside .login_area p{
+  color: #777;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+aside .category_area{
+  border-top: 1px solid #ccc;
+}
+aside .category_area .c_list{
+  padding: 18px 0 11px;
+}
+aside .category_area .c_list>.c_item{
+  position: relative;
+}
+aside .category_area .c_list>.c_item>a{
+  display: block;
+  padding: 15px 0;
+  color: #333;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+aside .category_area .c_list .c_item .sub_menu .s_list{
+  display: block;
+  padding-bottom: 15px;
+}
+aside .category_area .c_list .c_item .sub_menu .s_list .s_item{
+  display: block;
+    padding: 11px 0;
+    color: #848484;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+aside .board_area{
+  padding: 18px 0 11px;
+  border-top: 1px solid #ddd;
+}
+aside .board_area .b_list{}
+aside .board_area .b_list .b_item{
+  position: relative;
+}
+aside .board_area .b_list .b_item>a{
+  display: block;
+    padding: 13px 0;
+    color: #2d2d2d;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+aside .board_area .sub_menu{}
+aside .board_area .sub_menu .s_list{
+  display: block;
+}
+aside .board_area .sub_menu .s_list .s_item{
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 9px 0;
+  color: #888;
+}
+
+aside .recent_area{
+  padding: 40px 0;
+}
+aside .recent_area strong{
+  display: block;
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+aside .recent_area .r_list{
+  padding: 20px 0;
+}
+aside .recent_area .r_list::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+aside .recent_area .r_list .r_item{
+  width: 25%;
+  max-width: 70px;
+  float: left;
+  display: inline-block;
+}
+aside .recent_area .r_list .r_item+.r_item{
+  margin-left: 14px;
+}
+aside .recent_area .r_list .r_item img{
+  width: 100%;
+}
+aside .recent_area .all_more{
+  position: relative;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 10px 48px 10px 18px;
+    box-sizing: border-box;
+    color: #777;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+}
+aside .recent_area .all_more::after{
+  content: '';
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 25px;
+  height: 15px;
+  background: url(https://m.andar.co.kr/common/more_btn.png) no-repeat;
+  background-size: 15px auto;
+  background-position: right center;
+}
+
+
+/* top_advertisemant(최상단띠배너) */
+.top_advertisemant{
+  height: 40px;
+  overflow: hidden;
+}
+.top_advertisemant .top_bnr{
+  background: #000;
+  height: 40px;
+}
+.top_advertisemant .top_bnr a{
+  display: block;
+  height: 100%;
+  line-height: 40px;
+  color: #fff;
+  font-size: 13px;
+  overflow: hidden;
+  text-align: center;
+}
+.top_advertisemant .top_b1 p{
+  display: inline-block;
+}
+.top_advertisemant .top_b1 .c_o{
+  color: #ee5728;
+}
+.top_advertisemant .top_b2{}
+.top_advertisemant .top_b2 p{
+  display: inline-block;
+}
+.top_advertisemant .top_b2 .ico_channel{
+  display: inline-block;
+  width: 17px;
+  height: 18px;
+  background-image: url(https://m.andar.co.kr/common/mo/Icon_kakao_channel.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 3px;
+  margin-bottom: -4px;
+}
+.top_advertisemant .top_b1 .ico_more,
+.top_advertisemant .top_b2 .ico_more{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(https://m.andar.co.kr/iv/arrow_wh.png);
+  background-repeat: no-repeat;
+  margin-left: -5px;
+  margin-bottom: -6px;
+}
+
+
+/* header */
+header{
+  position: relative;
+}
+.logo_area{
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.logo_area .logo_wrap{
+  padding: 0 6px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_area .ico_wrap{
+  float: left;
+  text-align: center;
+}
+.logo_area .ico_wrap a{
+  display: block;
+  height: 100%;
+}
+.logo_area .ico_wrap i{
+  margin: 10px 10px;
+}
+
+.logo_area .left_wrap{
+  overflow: hidden;
+}
+.logo_area .left_wrap .aside_menu .ico_aside{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: -25px -50px;
+}
+.logo_area .left_wrap .search .ico_search{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: -25px -75px;
+}
+
+.logo_area .logo .ico_logo{
+  display: inline-block;
+  width: 87px;
+  height: 23px;
+  background: url(https://m.andar.co.kr/web/upload/logo/main_logo_m.svg) no-repeat;
+  margin-bottom: 5px;
+}
+
+.logo_area .right_wrap{
+  overflow: hidden;
+}
+.logo_area .right_wrap .shopping .ico_shopping{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: -25px -25px;
+}
+.logo_area .right_wrap .mypage .ico_mypage{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: -25px 0;
+}
+
+/*.logo_area.on*/
+.logo_area.on{
+  position: fixed;
+  top: 0;left: 0;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  z-index: 999;
+}
+.logo_area.on .left_wrap .aside_menu .ico_aside{
+  background-position: 0 -50px;
+}
+.logo_area.on .left_wrap .search .ico_search{
+  background-position: 0 -75px;
+}
+.logo_area.on .logo .ico_logo{
+  background: url(https://m.andar.co.kr/web/upload/logo/main_logo.svg) no-repeat;
+}
+.logo_area.on .right_wrap .shopping .ico_shopping{
+  background-position: 0 -25px;
+}
+.logo_area.on .right_wrap .mypage .ico_mypage{
+  background-position: 0 0;
+}
+
+/* 카테고리 슬라이드부분 */
+.category{
+  visibility: hidden;
+  position: absolute;
+}
+.category.on{
+  visibility: visible;
+  position: initial;
+}
+
+.logo_area.on .cate_sum_up{
+  width: calc(100% - 33px);
+  height: 40px;
+  overflow: hidden;
+
+  visibility: hidden;
+  position: absolute;
+}
+.logo_area.on .cate_sum_up.on{
+  visibility: visible;
+  position: initial;
+}
+
+.logo_area.on .cate_sum_up .cate_list{
+  width: 100%;
+  height: 100%;
+}
+.logo_area.on .cate_sum_up .cate_list .cate_item{
+  width: auto;
+  display: block;
+  line-height: 40px;
+  font-size: 16px;
+  letter-spacing: -0.05em;
+  color: #000;
+}
+
+.logo_area.on .all_view{
+  position: absolute;
+  top: 65px;
+  right: 13px;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(https://m.andar.co.kr/common/mo/btn_open.png) no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+/* 카테고리 전체보기 부분 */
+.logo_area.on .all_view.show{
+  transform: rotate(180deg);
+}
+.logo_area.on .all_menu_title{
+  width: calc(100% - 33px);
+  height: 40px;
+  font-size: 16px;
+  color: #000;
+  line-height: 40px;
+  margin-left: 16px;
+
+  visibility: hidden;
+  position: absolute;
+}
+.logo_area.on .all_menu_title.show{
+  visibility: visible;
+  position: initial;
+}
+
+.logo_area.on .top_menu_all{
+  background: #F6F6F6;
+  border-top: 1px solid #dcdcdc;
+
+  height: 0;
+  overflow: hidden;
+}
+
+.logo_area.on .top_menu_all .m_all_list{
+  padding: 6px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo_area.on .top_menu_all .m_all_list .all_item{
+  display: inline-block;
+  padding: 8px 17px;
+  margin: 3px 3px;
+  border: 1px solid #ebebeb;
+  border-radius: 100px;
+  background: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  letter-spacing: -0.06em;
+}
+
+
+/* 검색페이지 영역 */
+.search_wrap{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: url(https://m.andar.co.kr/web/andar/img/mobile/search-bg/20211126-1.jpg) no-repeat center/cover;
+
+  visibility: hidden;
+}
+.search_wrap.search_on{
+  visibility: visible;
+}
+
+.search_wrap .search_close{
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  display: block;
+  width: 10px;
+  height: 18px;
+  background: url(https://m.andar.co.kr/_wisa/img/button/close_search.png) no-repeat;
+  background-size: contain;
+}
+.search_wrap .inner{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 0;
+  width: 80%;
+}
+.search_wrap .inner .search_box{
+  width: 100%;
+  height: 45px;
+  padding: 0 6.55% 0 0;
+  border-bottom: 2px solid #fff;
+  background: none;
+}
+.search_wrap .inner .search_box .search_bar{
+  height: 43px;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 43px;
+  border: none;
+  outline: none;
+}
+.search_wrap .inner .search_box .search_bar::placeholder{
+  color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: -0.5px;
+}
+.search_wrap .inner .search_box .submit_btn{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 19px;
+  height: 19px;
+  margin-top: -9px;
+  background: url(https://m.andar.co.kr/_wisa/img/button/search.png) no-repeat center/19px auto;
+  color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* 퀵버튼영역 */
+.quick_btn{
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  z-index: 20;
+  width: 50px;
+  border: 1px solid #e9e9e9;
+  background-color: rgba(255,255,255,0.7);
+
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+}
+.quick_btn.show{
+  opacity: 1;
+  transition: 0.5s;
+  visibility: visible;
+}
+
+.quick_btn ul{}
+.quick_btn ul li{
+  padding: 5px;
+  box-sizing: border-box;
+}
+.quick_btn ul li+li{
+  border-top: 1px solid #e9e9e9;
+}
+
+.quick_btn ul li .ico_kakao{
+  display: block;
+  height: 30px;
+  background-image: url(https://m.andar.co.kr/common/mo/kakao_chat.png);
+  background-size: 35px 30px;
+  margin-top: 4px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.quick_btn ul li span{
+  display: block;
+    padding-top: 10px;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+    color: #595959;
+    text-align: center;
+}
+.quick_btn ul li .ico_top{
+  display: block;
+  height: 24px;
+    padding: 24px 20px 14px;
+    box-sizing: border-box;
+    background-image: url(https://m.andar.co.kr/common/mo/btn_top.png);
+    background-size: 19px auto;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+/* footer */
+footer{
+  background: #fafafa;
+  padding: 40px 16px 40px;
+  color: #555;
+}
+.css{
+  padding-bottom: 30px;
+}
+.css strong{
+  display: block;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+.css em{
+  display: block;
+  font-family : 'gilroy_b';
+  font-size: 18px;
+  line-height: 21px;
+  padding-bottom: 10px;
+}
+.css p{
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.sns{}
+.sns .s_list{}
+.sns .s_list .s_item{
+  display: inline-block;
+  margin-right: 25px;
+}
+.sns .s_list .s_item .ico_face{
+  display: inline-block;
+  width: 12px;
+  height: 22px;
+  background: url(https://m.andar.co.kr/common/mo/icon_facebook.png) no-repeat;
+  background-size: 12px 22px;
+}
+.sns .s_list .s_item .ico_youtube{
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(https://m.andar.co.kr/common/mo/icon_YouTube.png) no-repeat;
+  background-size: 22px 22px;
+}
+.sns .s_list .s_item .ico_insta{
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(https://m.andar.co.kr/common/mo/icon_Instagram.png) no-repeat;
+  background-size: 22px 22px;
+}
+
+.corp{
+  padding: 39px 0 39px;
+}
+.corp .c_list{}
+.corp .c_list .c_item{
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #777;
+  font-weight: 700;
+}
+.corp .c_list .c_item+.c_item::before{
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: #ccc;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+address{
+  color: #777;
+  font-size: 11px;
+  line-height: 21px;
+  font-weight: 400;
+}
+address span::after{
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: #ccc;
+  margin-left: 10px;
+  margin-right: 7px;
+}
+
+.copyright{
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: -0.02em;
+  color: #777;
+  padding-top: 30px;
+  font-weight: bold;
+}
+.copyright span{
+  font-weight: 400;
+}
+
+.support{
+  margin-top: 24px;
+}
+.support .s_list{}
+.support .s_list .s_item{
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 22px;
+}
+.support .s_list .s_item .img_wrap1{
+  width: 45px;
+}
+.support .s_list .s_item .img_wrap2{
+  width: 36px;
+  margin-bottom: -1px;
+}
+.support .s_list .s_item .img_wrap3{
+  width: 27px;
+  margin-bottom: 3px;
+}
+.support .s_list .s_item img{
+  width: 100%;
+  height: 100%;
+}

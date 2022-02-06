@@ -1,0 +1,424 @@
+/* main */
+
+.sc_main_vis{
+ position: relative;
+ height: calc(100vh - 100px);
+}
+.sc_main_vis .m_banner{
+  /* height: 818px; */
+  position: relative;
+}
+
+.sc_main_vis .m_banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sc_main_vis .m_banner .txt_box{
+  position: absolute;
+  bottom: 95px;
+  left: 37px;
+}
+.sc_main_vis .m_banner .txt_box .m_v_title{
+  font-family : 'gilroy_b';
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.25;
+  letter-spacing: -1.3px;
+  color: #fff;
+}
+.sc_main_vis .m_banner .txt_box .m_v_cont{
+  font-weight: 400;
+    padding-top: 15px;
+    font-size: 17px;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+    color: #fff;
+}
+.sc_main_vis .swiper-pagination{
+  margin-bottom: 40px;
+}
+.sc_main_vis .swiper-pagination .swiper-pagination-bullet{
+  margin: 0;
+  background: #fff;
+  border-radius: 0;
+  width: 20px;
+  height: 2px;
+  opacity: 0.3;
+}
+.sc_main_vis .swiper-pagination .swiper-pagination-bullet-active{
+  opacity: 1;
+}
+/* //sc_main_vis */
+
+.sc_best{
+  margin-top: 50px;
+}
+.sc_best .best_item_box{
+  margin-top: 22px;
+}
+
+
+/*
+베스트, 신상 공용 썸네일 스타일
+sc_best, sc_new(thumbnail_list)
+*/
+.sc_best .thumbnail_list,
+.sc_new .thumbnail_list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sc_best .thumbnail_item,
+.sc_new .thumbnail_item{
+  margin-bottom: 50px;
+  width: 50%;
+  padding-right: 1.11%;
+}
+.sc_best .thumbnail_item:nth-child(2n),
+.sc_new .thumbnail_item:nth-child(2n){
+  padding-right: 0;
+  padding-left: 1.11%;
+}
+
+.sc_best .thumbnail_item .img_box,
+.sc_new .thumbnail_item .img_box{
+  position: relative;
+}
+.sc_best .thumbnail_item .img_box img,
+.sc_new .thumbnail_item .img_box img{
+  width: 100%;
+}
+
+.sc_best .thumbnail_item .img_box .sticker,
+.sc_new .thumbnail_item .img_box .sticker{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sc_best .thumbnail_item .img_box .sticker .s_new,
+.sc_new .thumbnail_item .img_box .sticker .s_new{
+  display: inline-block;
+  width: 36px;
+  height: 87px;
+  background-image: url(https://m.andar.co.kr/web/upload/image_custom_1816343080523522.png);
+  background-repeat: no-repeat;
+  background-size: 36px 87px;
+}
+.sc_best .thumbnail_item .img_box .sticker .s_fluff,
+.sc_new .thumbnail_item .img_box .sticker .s_fluff{
+  display: inline-block;
+  width: 36px;
+  height: 62px;
+  background-image: url(https://m.andar.co.kr/web/upload/image_custom_1716342921996668.png);
+  background-repeat: no-repeat;
+  background-size: 36px 62px;
+}
+/* //sc_best+sc_new(thumbnail_list) */
+
+
+
+.sc_mp{
+  margin: 60px 0 20px;
+}
+.sc_mp img{
+  width: 100%;
+}
+/* //sc_mp */
+
+.sc_lookbook{}
+.sc_lookbook .look_box{}
+
+.sc_lookbook .look_box .look_title{}
+.sc_lookbook .look_box .look_title .img_wrap{}
+.sc_lookbook .look_box .look_title .img_wrap img{
+  width: 100%;
+}
+
+.sc_lookbook .look_box .look_title .txt_box{
+  padding: 20px 16px 20px;
+}
+.sc_lookbook .look_box .look_title .txt_box strong{
+  display: block;
+  font-size: 26px;
+    line-height: 35px;
+    color: #333;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+}
+.sc_lookbook .look_box .look_title .txt_box p{
+  padding: 14px 0 28px;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.05em;
+    color: #333;
+    font-weight: 400;
+}
+.sc_lookbook .look_box .look_title .txt_box .look_more_btn{
+  position: relative;
+    display: inline-block;
+    border: 1px solid #1e1e1e;
+    border-radius: 2px;
+    padding: 8px 47px 8px 18px;
+    box-sizing: border-box;
+    color: #fff;
+    background: #1e1e1e;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+}
+.sc_lookbook .look_box .look_title .txt_box .look_more_btn::after{
+  content: '';
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 25px;
+  height: 15px;
+  background: url(https://m.andar.co.kr/common/mo/Icon_move.png) no-repeat;
+  background-size: 15px auto;
+  background-position: right center;
+}
+
+.sc_lookbook .look_box .look_list{}
+.sc_lookbook .look_box .look_list .l_list{
+  margin-bottom: 40px;
+}
+.sc_lookbook .look_box .look_list .l_list .l_item{
+  padding: 20px 0;
+  width: 100%;
+  display: block;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+}
+.sc_lookbook .look_box .look_list .l_list .l_item+.l_item{
+  border-top: 1px solid #eee;
+}
+
+.sc_lookbook .look_box .look_list .l_list .l_item .img_box{
+  position: relative;
+  width: 110px;
+}
+.sc_lookbook .look_box .look_list .l_list .l_item .img_box img{
+  width: 100%;
+}
+.sc_lookbook .look_box .look_list .l_list .l_item .img_box .sticker{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sc_lookbook .look_box .look_list .l_list .l_item .img_box .sticker .s_fluff{
+  display: inline-block;
+  width: 20px;
+  height: 34px;
+  background-image: url(https://m.andar.co.kr/web/upload/image_custom_1716342921996668.png);
+  background-repeat: no-repeat;
+  background-size: 20px 34px;
+}
+.sc_lookbook .look_box .look_list .l_list .l_item .thumbnail_txt_box{
+  margin-bottom: 8px;
+}
+/* //sc_lookbook */
+
+.sc_new{
+  margin-bottom: 65px;
+}
+.sc_new .thumbnail_list{
+  margin-top: 22px;
+}
+/* //sc_new */
+
+.sc_brand_story{
+  margin: 20px 0;
+  padding: 56px 20px;
+  background-color: #C86733;
+}
+.sc_brand_story .cate_title{
+  color: #fff;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    margin: 0 auto 10px;
+    font-weight: 400;
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    line-height: 1.2;
+}
+.sc_brand_story em{
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+.sc_brand_story p{
+  padding: 10px 0 5px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #fff;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+}
+.sc_brand_story .b_more_btn{
+  display: block;
+    width: 100px;
+    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+}
+/* //sc_brand_story */
+
+
+/* 레깅스, 브라탑, 세트 공용 스타일 */
+.sc_leggings .cont_head,
+.sc_bratop .cont_head,
+.sc_set .cont_head{
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.sc_leggings .cont_head .cate_title,
+.sc_bratop .cont_head .cate_title,
+.sc_set .cont_head .cate_title{
+  font-size: 20px;
+  line-height: 24px;
+  color: #333;
+  font-weight: 600;
+}
+.sc_leggings .cont_head .c_more_btn,
+.sc_bratop .cont_head .c_more_btn,
+.sc_set .cont_head .c_more_btn{
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0 5px;
+}
+.sc_leggings .cont_head .c_more_btn::after,
+.sc_bratop .cont_head .c_more_btn::after,
+.sc_set .cont_head .c_more_btn::after{
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 15px;
+  background: url(https://m.andar.co.kr/common/more_btn.png) no-repeat;
+  background-size: 15px auto;
+  background-position: right center;
+  margin-bottom: -2px;
+  margin-left: -7px;
+}
+
+.sc_leggings .thumbnail_list,
+.sc_bratop .thumbnail_list,
+.sc_set .thumbnail_list{
+  padding-left: 20px;
+}
+.sc_leggings .thumbnail_list .thumbnail_item,
+.sc_bratop .thumbnail_list .thumbnail_item,
+.sc_set .thumbnail_list .thumbnail_item{
+  width: 205px;
+}
+.sc_leggings .thumbnail_list .thumbnail_item .img_box,
+.sc_bratop .thumbnail_list .thumbnail_item .img_box,
+.sc_set .thumbnail_list .thumbnail_item .img_box{
+  width: 205px;
+  position: relative;
+}
+.sc_leggings .thumbnail_list .thumbnail_item .img_box img,
+.sc_bratop .thumbnail_list .thumbnail_item .img_box img,
+.sc_set .thumbnail_list .thumbnail_item .img_box img{
+  width: 100%;
+}
+.sc_leggings .thumbnail_list .thumbnail_item .img_box .sticker,
+.sc_bratop .thumbnail_list .thumbnail_item .img_box .sticker,
+.sc_set .thumbnail_list .thumbnail_item .img_box .sticker{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sc_leggings .thumbnail_list .thumbnail_item .img_box .sticker .s_fluff,
+.sc_bratop .thumbnail_list .thumbnail_item .img_box .sticker .s_fluff,
+.sc_set .thumbnail_list .thumbnail_item .img_box .sticker .s_fluff{
+  display: inline-block;
+  width: 36px;
+  height: 62px;
+  background-image: url(https://m.andar.co.kr/web/upload/image_custom_1716342921996668.png);
+  background-repeat: no-repeat;
+  background-size: 36px 62px;
+}
+.sc_leggings .thumbnail_list .thumbnail_item .img_box .sticker .s_new,
+.sc_bratop .thumbnail_list .thumbnail_item .img_box .sticker .s_new,
+.sc_set .thumbnail_list .thumbnail_item .img_box .sticker .s_new{
+  display: inline-block;
+  width: 36px;
+  height: 87px;
+  background-image: url(https://m.andar.co.kr/web/upload/image_custom_1816343080523522.png);
+  background-repeat: no-repeat;
+  background-size: 36px 87px;
+}
+
+.sc_leggings .thumbnail_list .thumbnail_item .thumbnail_txt_box,
+.sc_bratop .thumbnail_list .thumbnail_item .thumbnail_txt_box,
+.sc_set .thumbnail_list .thumbnail_item .thumbnail_txt_box{
+  width: 205px;
+  padding: 15px 2% 0;
+}
+/* //sc_leggings */
+
+.sc_other{
+  padding-top: 70px;
+}
+.sc_other .o_box{
+  padding: 65px 20px;
+}
+.sc_other .membership{
+  background: url(https://m.andar.co.kr/web/andar/banner/member/20210628/banner-mo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sc_other .offline_store{
+  margin-top: 10px;
+  background: url(https://m.andar.co.kr/web/andar/banner/store/20210628/banner-mo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sc_other .o_box .txt_box{}
+.sc_other .o_box .txt_box strong{
+  display: block;
+  font-size: 26px;
+    line-height: 31px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #fff;
+}
+.sc_other .o_box .txt_box p{
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #fff;
+  padding: 15px 0 30px;
+  box-sizing: border-box;
+}
+.sc_other .o_box .txt_box span{
+  border: 1px solid #fff;
+  padding: 7px 25px 8px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+  display: inline-block;
+  box-sizing: border-box;
+}
+/* //sc_other */
