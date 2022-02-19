@@ -51,7 +51,7 @@ aside .closs{
   right: 20px;
   width: 24px;
   height: 24px;
-  background: url(https://m.andar.co.kr/common/mo/icon_close.png) no-repeat;
+  background: url(../img/header/nav/sidemenu/icon_close.png) no-repeat;
   background-size: 100% auto;
 }
 
@@ -60,7 +60,7 @@ aside .down_btn::after{
   width: 30px;
   height: 28px;
   transition-duration: .3s;
-  background: url(https://m.andar.co.kr/common/mo/btn_open.png) no-repeat;
+  background: url(../img/header/nav/sidemenu/btn_open.png) no-repeat;
   background-size: 28px auto;
   background-position: center;
   content: "";
@@ -218,7 +218,7 @@ aside .recent_area .all_more::after{
   top: 10px;
   width: 25px;
   height: 15px;
-  background: url(https://m.andar.co.kr/common/more_btn.png) no-repeat;
+  background: url(../img/header/nav/sidemenu/more_btn.png) no-repeat;
   background-size: 15px auto;
   background-position: right center;
 }
@@ -256,7 +256,7 @@ aside .recent_area .all_more::after{
   display: inline-block;
   width: 17px;
   height: 18px;
-  background-image: url(https://m.andar.co.kr/common/mo/Icon_kakao_channel.png);
+  background-image: url(../img/header/top_bnr/Icon_kakao_channel.png);
   background-repeat: no-repeat;
   background-size: contain;
   margin-left: 3px;
@@ -267,7 +267,7 @@ aside .recent_area .all_more::after{
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url(https://m.andar.co.kr/iv/arrow_wh.png);
+  background-image: url(../img/header/top_bnr/arrow_wh.png);
   background-repeat: no-repeat;
   margin-left: -5px;
   margin-bottom: -6px;
@@ -324,7 +324,7 @@ header{
   display: inline-block;
   width: 87px;
   height: 23px;
-  background: url(https://m.andar.co.kr/web/upload/logo/main_logo_m.svg) no-repeat;
+  background: url(../img/header/nav/logo/main_logo_w.svg) no-repeat;
   margin-bottom: 5px;
 }
 
@@ -359,7 +359,7 @@ header{
   background-position: 0 -75px;
 }
 .logo_area.on .logo .ico_logo{
-  background: url(https://m.andar.co.kr/web/upload/logo/main_logo.svg) no-repeat;
+  background: url(../img/header/nav/logo/main_logo_b.svg) no-repeat;
 }
 .logo_area.on .right_wrap .shopping .ico_shopping{
   background-position: 0 -25px;
@@ -411,7 +411,7 @@ header{
   display: inline-block;
   width: 28px;
   height: 28px;
-  background: url(https://m.andar.co.kr/common/mo/btn_open.png) no-repeat;
+  background: url(../img/header/nav/icon/btn_open.png) no-repeat;
   background-size: 100% auto;
   background-position: center;
 }
@@ -471,7 +471,7 @@ header{
   z-index: 9999;
   width: 100%;
   height: 100%;
-  background: url(https://m.andar.co.kr/web/andar/img/mobile/search-bg/20211126-1.jpg) no-repeat center/cover;
+  background: url(../img/header/nav/search/20211126-1.jpg) no-repeat center/cover;
 
   visibility: hidden;
 }
@@ -486,7 +486,7 @@ header{
   display: block;
   width: 10px;
   height: 18px;
-  background: url(https://m.andar.co.kr/_wisa/img/button/close_search.png) no-repeat;
+  background: url(../img/header/nav/search/close_search.png) no-repeat;
   background-size: contain;
 }
 .search_wrap .inner{
@@ -528,7 +528,7 @@ header{
   width: 19px;
   height: 19px;
   margin-top: -9px;
-  background: url(https://m.andar.co.kr/_wisa/img/button/search.png) no-repeat center/19px auto;
+  background: url(../img/header/nav/search/search.png) no-repeat center/19px auto;
   color: transparent;
   border: none;
   cursor: pointer;
@@ -566,8 +566,8 @@ header{
 .quick_btn ul li .ico_kakao{
   display: block;
   height: 30px;
-  background-image: url(https://m.andar.co.kr/common/mo/kakao_chat.png);
-  background-size: 35px 30px;
+  background-image: url(../img/quick/kakao_chat.png);
+  background-size: 85% 85%;
   margin-top: 4px;
   display: block;
   background-repeat: no-repeat;
@@ -588,7 +588,7 @@ header{
   height: 24px;
     padding: 24px 20px 14px;
     box-sizing: border-box;
-    background-image: url(https://m.andar.co.kr/common/mo/btn_top.png);
+    background-image: url(../img/quick/btn_top.png);
     background-size: 19px auto;
     display: block;
     background-repeat: no-repeat;
@@ -639,21 +639,21 @@ footer{
   display: inline-block;
   width: 12px;
   height: 22px;
-  background: url(https://m.andar.co.kr/common/mo/icon_facebook.png) no-repeat;
+  background: url(../img/footer/icon_facebook.png) no-repeat;
   background-size: 12px 22px;
 }
 .sns .s_list .s_item .ico_youtube{
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: url(https://m.andar.co.kr/common/mo/icon_YouTube.png) no-repeat;
+  background: url(../img/footer/icon_YouTube.png) no-repeat;
   background-size: 22px 22px;
 }
 .sns .s_list .s_item .ico_insta{
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: url(https://m.andar.co.kr/common/mo/icon_Instagram.png) no-repeat;
+  background: url(../img/footer/icon_Instagram.png) no-repeat;
   background-size: 22px 22px;
 }
 

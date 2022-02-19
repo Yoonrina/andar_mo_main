@@ -97,21 +97,27 @@ sc_best, sc_new(thumbnail_list)
   top: 0;
   right: 0;
 }
-.sc_best .thumbnail_item .img_box .sticker .s_new,
-.sc_new .thumbnail_item .img_box .sticker .s_new{
+.s_new{
   display: inline-block;
   width: 36px;
   height: 87px;
-  background-image: url(https://m.andar.co.kr/web/upload/image_custom_1816343080523522.png);
+  background-image: url(../img/main/thumbnail/newnap.png);
   background-repeat: no-repeat;
   background-size: 36px 87px;
 }
-.sc_best .thumbnail_item .img_box .sticker .s_fluff,
-.sc_new .thumbnail_item .img_box .sticker .s_fluff{
+.s_ssnew{
+  display: inline-block;
+  width: 47px;
+  height: 26px;
+  background-image: url(../img/main/thumbnail/new.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.s_fluff{
   display: inline-block;
   width: 36px;
   height: 62px;
-  background-image: url(https://m.andar.co.kr/web/upload/image_custom_1716342921996668.png);
+  background-image: url(../img/main/thumbnail/nap.png);
   background-repeat: no-repeat;
   background-size: 36px 62px;
 }

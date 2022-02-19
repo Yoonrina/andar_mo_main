@@ -71,7 +71,7 @@ aside .category_area .c_list .c_item > .em::after{
 .logo_area .left_wrap .search .ico_search,
 .logo_area .right_wrap .shopping .ico_shopping,
 .logo_area .right_wrap .mypage .ico_mypage{
-  background-image: url(https://m.andar.co.kr/_wisa/img/common/sp_common_layout.png);
+  background-image: url(../img/header/nav/icon/sp_common_layout.png);
   background-repeat: no-repeat;
   background-size: 100px;
 }
@@ -125,6 +125,7 @@ aside .category_area .c_list .c_item > .em::after{
 .thumbnail_txt_box .price_box p{
   color: #333;
   display: inline-block;
+  font-weight: 500;
 }
 .thumbnail_txt_box .price_box .discount{
   font-size: 13px;
@@ -181,6 +182,6 @@ aside .category_area .c_list .c_item > .em::after{
     margin-left: 3px;
     width: 19px;
     height: 19px;
-    background: url(https://m.andar.co.kr/common/mo/go_cate.png) no-repeat;
+    background: url(../img/main/icon/go_cate.png) no-repeat;
     background-size: 19px;
 }
